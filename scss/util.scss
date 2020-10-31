@@ -1,0 +1,27 @@
+.hover:hover {
+	background: var(--bg-hover);
+	cursor: pointer;
+}
+
+.transparent {
+	background: transparent;
+	opacity: 0;
+}
+
+@media screen {
+	.print-only {
+		display: none;
+	}
+}
+
+@media print {
+	.screen {
+		display: none !important;
+	}
+
+	.print-only {
+		color: black;
+		--muted: black;
+		--border: 1pt solid #aaaaaa;
+	}
+}

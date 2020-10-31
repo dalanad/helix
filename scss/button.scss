@@ -1,0 +1,82 @@
+@import "variables";
+.btn,
+button {
+	transition: opacity 0.1s ease-in;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	text-shadow: none;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-weight: 600;
+	outline: none;
+	overflow: hidden;
+	text-decoration: none;
+	white-space: nowrap;
+	max-width: 100%;
+	display: inline-flex;
+	padding: 0 0.7em;
+	min-height: 2em;
+	color: var(--bg);
+	background-color: var(--primary);
+	border: 2px solid var(--primary);
+	font-size: 1rem;
+	border-radius: 4px;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:focus {
+		outline: var(--primary) solid 1px;
+		outline-offset: 2px;
+	}
+
+	~ button {
+		margin-left: 0.25em;
+	}
+
+	&.loading::before {
+		content: " ";
+		display: block;
+		height: 2em;
+		width: 30px;
+		background-size: contain;
+		// background: url(/assets/static/spinner.svg) no-repeat;
+	}
+
+	&.link {
+		background-color: transparent;
+		color: var(--primary);
+		padding: 0 5px;
+		border: none;
+		min-height: auto;
+	}
+
+	&.outline {
+		background-color: var(--bg);
+		color: var(--primary);
+	}
+
+	&[shadow] {
+		box-shadow: var(--shadow);
+	}
+
+	&:active {
+		box-shadow: none;
+		opacity: 1;
+	}
+
+	&.icon-btn {
+		background: transparent;
+		color: inherit;
+		padding: 0 7.5px;
+		border: none;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+}
