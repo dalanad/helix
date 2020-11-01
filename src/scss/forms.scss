@@ -1,3 +1,5 @@
+@import "variables";
+
 form section {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -19,7 +21,7 @@ form section {
 
 .ctrl {
 	padding: 0.3rem;
-	border-radius: 4px;
+	border-radius: $br;
 	transition: box-shadow 0.1s ease-in-out;
 	font-family: inherit;
 	border: 1px solid var(--muted);
@@ -41,10 +43,10 @@ form section {
 	&:focus,
 	&:focus-within {
 		--muted: var(--primary);
-		box-shadow: 0 0 0 1px var(--primary);
+		box-shadow: 0 0 0 1px var(--muted);
 	}
 
-	&:invalid,
+	&.dirty:invalid,
 	&.ng-invalid.ng-dirty {
 		--muted: var(--danger);
 	}
@@ -100,25 +102,25 @@ form section {
 	display: block;
 }
 
-[type="radio"],
-[type="checkbox"] {
-	position: absolute;
-	left: -9999px;
-}
+// [type="radio"],
+// [type="checkbox"] {
+// 	position: absolute;
+// 	left: -9999px;
+// }
 
-[type="radio"]:checked + label,
-[type="checkbox"]:checked + label {
-	opacity: 1;
-	font-weight: 700;
-}
+// [type="radio"]:checked + label,
+// [type="checkbox"]:checked + label {
+// 	opacity: 1;
+// 	font-weight: 700;
+// }
 
-[type="radio"]:not(:checked) + label,
-[type="checkbox"]:not(:checked) + label {
-	color: var(--primary);
-	background: transparent;
-	border: var(--border);
-}
+// [type="radio"]:not(:checked) + label,
+// [type="checkbox"]:not(:checked) + label {
+// 	color: var(--primary);
+// 	background: transparent;
+// 	border: var(--border);
+// }
 
-[type="number"]:not(.text-left) {
-	text-align: right;
-}
+// [type="number"]:not(.text-left) {
+// 	text-align: right;
+// }
