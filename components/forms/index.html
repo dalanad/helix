@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UT8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helix UI Components</title>
+    <link href="/helix/dist/helix.css" rel="stylesheet" type="text/css" />
+    <script src="/helix/dist/main.js"></script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E🧬%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+</head>
+
+<body>
+    <h2 class="p-2"> 🧬 Helix Components</h2>
+    <div class="px-4" style="display:grid;grid-template-columns: 200px auto;">
+        <div>
+            
+            <div> <a class="btn link" href="/helix/">Home</a></div>
+            
+            <div> <a class="btn link" href="/helix/components/alert">Alert</a></div>
+            
+            <div> <a class="btn link" href="/helix/components/buttons">Buttons</a></div>
+            
+            <div> <a class="btn link" href="/helix/components/forms">Forms</a></div>
+            
+            <div> <a class="btn link" href="/helix/components/table">Table</a></div>
+            
+        </div>
+        <div>
+            
+
+<h3>Forms</h3>
+<form>
+
+    <section>
+        <div class="field">
+            <label>Label</label>
+            <input class="ctrl" />
+        </div>
+        <div class="field">
+            <label>Label</label>
+            <div class="ctrl group">
+                <span class="static">RS</span>
+                <input class="ctrl" />
+                <select class="ctrl">
+                    <option>TEst</option>
+                    <option>TEst</option>
+                    <option>TEst</option>
+                    <option>TEst</option>
+                    <option>TEst</option>
+                </select> <span class="static">RS</span>
+            </div>
+            <span class="field-msg">Hint or field-msg</span>
+        </div>
+        <div class="field">
+            <label>Label</label>
+
+            <select class="ctrl">
+                <option>TEst</option>
+                <option>TEst</option>
+                <option>TEst</option>
+                <option>TEst</option>
+                <option>TEst</option>
+            </select>
+            <span class="field-msg">Hint or field-msg</span>
+        </div>
+        <div class="field">
+            <label>Label</label>
+            <input class="danger ctrl" />
+            <span class="field-msg">Hint or field-msg</span>
+        </div>
+        <div class="field">
+            <label>Label</label>
+            <input class="ctrl" type="date" />
+        </div>
+        <div class="field">
+            <label>Select</label>
+            <helix-select></helix-select>
+        </div>
+        <div class="field">
+            <label>Select</label>
+            <helix-toggle name="test" value="1"></helix-toggle>
+        </div>
+    </section>
+    <div>
+        <helix-dropdown>
+            <button class="outline" slot="trigger" type="button"> Open </button>
+            <template>
+                <div slot="content"> asdas </div>
+            </template>
+        </helix-dropdown>
+    </div>
+
+
+    <br>
+
+    <button>Submit</button>
+</form>
+
+        </div>
+    </div>
