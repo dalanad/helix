@@ -1,3 +1,3 @@
-# helix
+# Helix
 
 A CSS (Library || Framework)
