@@ -19,19 +19,24 @@ button {
 	display: inline-flex;
 	padding: 0 0.7em;
 	min-height: 2em;
-	color: var(--bg) !important;
+	color: var(--bg);
 	background-color: var(--primary);
 	border: 2px solid var(--primary);
 	font-size: 1rem;
 	border-radius: $br;
 	text-decoration: none !important;
+
+	&a {
+		color: var(--primary) !important;
+	}
+
 	&:hover {
 		opacity: 0.8;
 	}
 
 	&:focus {
 		outline: var(--primary) solid 1px;
-		outline-offset: 2px;
+		outline-offset: 1px;
 	}
 
 	~ button {

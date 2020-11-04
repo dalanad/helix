@@ -27,7 +27,6 @@ form section {
 	border: 1px solid var(--muted);
 	background: transparent;
 	color: var(--color);
-	line-height: 1rem;
 	font-size: 1rem;
 	width: 100%;
 
@@ -65,7 +64,7 @@ form section {
 		.static {
 			white-space: nowrap;
 			background: var(--bg-hover);
-			padding: 0.5em;
+			padding: 0.3em 0.5em;
 			font-weight: 600;
 		}
 

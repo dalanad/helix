@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-@import "../node_modules//bootstrap/scss//bootstrap-reboot.scss";
-$border-color: var(--muted);
+@import "../../node_modules//bootstrap/scss//bootstrap-reboot.scss";
+$border-color: #ccc;
 $black: #2e3a59 !default;
 
 $blue: #007bff !default;
@@ -11,7 +11,7 @@ $red: #ff3d32 !default;
 $orange: #ffa500 !default;
 $green: #48ba39 !default;
 
-@import "../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/utilities";
 
 @import "variables";
 
@@ -220,12 +220,11 @@ hr {
 }
 
 .alert {
-	border-radius: 0.25rem;
-	margin-bottom: 1em;
-	font-weight: 600;
-	color: var(--bg);
-	background-color: var(--primary);
-	padding: 1rem 3rem 1rem 1.125rem;
+	border-radius: $br;
+	margin-bottom: 0.5em;
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	padding: 0.5rem;
 }
 
 pre {

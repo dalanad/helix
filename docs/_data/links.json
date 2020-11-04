@@ -1,0 +1,7 @@
+[
+	{ "name": "Home", "href": "/" },
+	{ "name": "Alert", "href": "/components/alert" },
+	{ "name": "Buttons", "href": "/components/buttons" },
+	{ "name": "Forms", "href": "/components/forms" },
+	{ "name": "Table", "href": "/components/table" }
+]

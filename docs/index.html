@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Helix UI Components
+
+---
+
+<h3>Tags</h3>
+<div>
+    {% for class in colors %}
+    <span class="tag {{class}}">Label</span>
+    <span class="tag stale {{class}}">Label</span>
+    {% endfor %}
+</div>
+<h3>Card</h3>
+
+<div class="card p-2">
+    <h2>TEST</h2>
+</div>
+<br />
+
+
+
+</html>
