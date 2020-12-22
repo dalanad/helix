@@ -17,7 +17,7 @@ $green: #48ba39 !default;
 
 :root {
 	--bg: #fff;
-	--color: #223762;
+	--color: #05386b;
 
 	--gray-1: #f5f5f5;
 	--gray-2: #eeeeee;
@@ -27,13 +27,13 @@ $green: #48ba39 !default;
 
 	--muted: var(--gray-4);
 
-	--neutral: #888;
-	--primary: #007bff;
-	--accent: #ff4081;
-	--danger: #ff3d32;
+	--neutral: #4677a8;
+	--primary: #0076f5;
+	--accent: #eb4d81;
+	--danger: #ee6352;
 	--info: #3884ec;
 	--orange: #ffa500;
-	--success: #48ba39;
+	--success: #01c588;
 
 	--shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 5px 8px -4px;
 	--shadow-light: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;
@@ -47,6 +47,13 @@ $green: #48ba39 !default;
 .dark-theme {
 	--bg: rgb(15, 32, 45);
 	--color: rgba(255, 255, 255, 0.74);
+
+	--gray-1: #f5f5f51a;
+	--gray-2: #eeeeee1a;
+	--gray-3: #dddddd1a;
+	--gray-4: #cccccc1a;
+	--gray-5: #8888881a;
+
 	--muted: #ffffff1a;
 	--muted-bg: #dddddd10;
 	--neutral: #767676;
