@@ -6,7 +6,7 @@ form section {
 	grid-column-gap: 0.5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
 	section.side-label {
 		grid-template-columns: minmax(200px, min-content) auto;
 		justify-items: flex-start;
@@ -63,7 +63,7 @@ form section {
 			white-space: nowrap;
 			background: var(--bg-hover);
 			padding: 0.3em 0.5em;
-			font-weight: 600;
+			font-weight: 500;
 		}
 
 		.ctrl {
@@ -85,11 +85,11 @@ form section {
 	padding-bottom: 0.5em;
 	display: flex;
 	flex-direction: column;
-
+	justify-content: center;
 	> label {
 		display: block;
 		margin-bottom: 0.3em;
-		font-weight: 600;
+		font-weight: 500;
 		font-size: 0.9em;
 	}
 }

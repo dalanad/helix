@@ -10,7 +10,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	font-weight: 600;
+	font-weight: 500;
 	outline: none;
 	overflow: hidden;
 	text-decoration: none;
@@ -34,7 +34,7 @@ button {
 		opacity: 0.8;
 	}
 
-	&:focus {
+	&:focus:not(.using-mouse) {
 		outline: var(--primary) solid 1px;
 		outline-offset: 1px;
 	}
