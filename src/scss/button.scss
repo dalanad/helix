@@ -34,12 +34,13 @@ button {
 		opacity: 0.8;
 	}
 
-	&:focus:not(.using-mouse) {
+	&:focus {
 		outline: var(--primary) solid 1px;
 		outline-offset: 1px;
 	}
 
-	~ button {
+	~ button,
+	~ .btn {
 		margin-left: 0.25em;
 	}
 
@@ -81,8 +82,17 @@ button {
 		border: none;
 	}
 
-	&:disabled {
-		cursor: not-allowed;
-		opacity: 0.5;
+	&:disabled,
+	&.disabled,
+	&[disabled] {
+		pointer-events: none;
+		opacity: 0.75;
+	}
+}
+
+.using-mouse {
+	.btn,
+	button {
+		outline: none;
 	}
 }

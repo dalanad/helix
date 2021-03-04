@@ -1,8 +1,7 @@
 const gulp = require("gulp"),
 	autoprefixer = require("gulp-autoprefixer"),
 	cleanCSS = require("gulp-clean-css"),
-	sass = require("gulp-sass"),
-	rollup = require("gulp-rollup");
+	sass = require("gulp-sass");
 
 gulp.task("compile-css", function (params) {
 	return gulp
@@ -11,7 +10,7 @@ gulp.task("compile-css", function (params) {
 		.pipe(autoprefixer())
 		.pipe(
 			cleanCSS({
-				level: 2,
+				level: { 2: { restructureRules: true, mergeIntoShorthands: true, mergeAdjacentRules: true, mergeSemantically: true } },
 				specialComments: false,
 			})
 		)
@@ -19,19 +18,15 @@ gulp.task("compile-css", function (params) {
 });
 
 gulp.task("bundle-js", function () {
-	return gulp
-		.src("./src/js/**/*.js")
-		.pipe(
-			rollup({
-				// any option supported by Rollup can be set here.
-				input: "./src/js/main.js",
-				output: {
-					file: "helix.js",
-					format: "cjs",
-				},
-			})
-		)
-		.pipe(gulp.dest("dist"));
+	return require("esbuild").build({
+		entryPoints: ["./src/js/main.js"],
+		bundle: true,
+		outfile: "dist/main.js",
+		format: "iife",
+		minify: true,
+
+		banner: "/*hlx components*/",
+	});
 });
 
 gulp.task("build", gulp.series("compile-css", "bundle-js"));

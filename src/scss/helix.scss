@@ -4,12 +4,12 @@
 $border-color: #ccc;
 $black: #2e3a59 !default;
 
-$blue: #007bff !default;
+$blue: hsl(214, 90%, 52%) !default; 
 
 $pink: #ff4081 !default;
-$red: #ff3d32 !default;
+$red: hsl(3, 100%, 61%) !default;
 $orange: #ffa500 !default;
-$green: #48ba39 !default;
+$green: hsl(145, 80%, 42%) !default;
 
 @import "../../node_modules/bootstrap/scss/utilities";
 
@@ -28,17 +28,17 @@ $green: #48ba39 !default;
 	--muted: var(--gray-4);
 
 	--neutral: #4677a8;
-	--primary: #0076f5;
+	--primary: hsl(214, 90%, 52%);
 	--accent: #eb4d81;
-	--danger: #ee6352;
+	--danger: hsl(3, 100%, 61%);
 	--info: #3884ec;
-	--orange: #ffa500;
-	--success: #01c588;
+	--orange: #ffc13f;
+	--success: hsl(145, 80%, 42%);
 
 	--shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 5px 8px -4px;
 	--shadow-light: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;
 	--shadow-heavy: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
-	--font-family: "Roboto", "sans-serif";
+	--font-family: "Roboto", sans-serif;
 	--border: 1px solid var(--muted);
 	--bg-hover: #eee;
 	--bg-gradient: linear-gradient(90deg, #007bff 0%, #03a4f9 100%);
@@ -63,10 +63,11 @@ $green: #48ba39 !default;
 	--bg-gradient: linear-gradient(90deg, #2363c4 0%, #03a4f9 100%);
 	--border: 1px solid var(--muted);
 }
+
 body,
 html {
 	margin: 0;
-	height: 100%;
+	height: 100%;	
 	font-family: var(--font-family);
 	color: var(--color);
 	background-color: var(--bg);
@@ -90,8 +91,6 @@ a {
 
 :focus {
 	outline: none;
-	//  outline:   var(--primary) auto;
-	//outline-color: var(--primary);
 }
 
 @import "forms";
