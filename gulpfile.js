@@ -10,7 +10,7 @@ gulp.task("compile-css", function (params) {
 		.pipe(autoprefixer())
 		.pipe(
 			cleanCSS({
-				level: { 2: { restructureRules: true, mergeIntoShorthands: true, mergeAdjacentRules: true, mergeSemantically: true } },
+				level: 2,
 				specialComments: false,
 			})
 		)
