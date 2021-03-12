@@ -8,26 +8,48 @@
     <title>Helix UI Components</title>
     <link href="/helix/dist/helix.css" rel="stylesheet" type="text/css" />
     <script src="/helix/dist/main.js"></script>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E🧬%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h2 class="p-2"> 🧬 Helix Components</h2>
-    <div class="px-4" style="display:grid;grid-template-columns: 200px auto;">
-        <div>
-            
-            <div> <a class="btn link" href="/helix/">Home</a></div>
-            
-            <div> <a class="btn link" href="/helix/components/alert">Alert</a></div>
-            
-            <div> <a class="btn link" href="/helix/components/buttons">Buttons</a></div>
-            
-            <div> <a class="btn link" href="/helix/components/forms">Forms</a></div>
-            
-            <div> <a class="btn link" href="/helix/components/table">Table</a></div>
-            
+    <header class="header"> <span class="brand"><i class="fa fa-dna"></i> &nbsp; Helix Components</span> </header>
+    <div style="display:flex;height: calc(100% - 40px);">
+        <div class="sidebar collapsed">
+            <div class="nav-list">
+                
+                <div class="nav-item active">
+                    <a class="nav-link" href="/helix/"> <i class="fa fa-home nav-icon"></i> <span class="nav-link-text"> Home </span></a>
+                    
+                </div>
+                
+                <div class="nav-item ">
+                    <a class="nav-link" href="/helix/components/alert"> <i class="fa fa-sitemap nav-icon"></i> <span class="nav-link-text"> Alert </span></a>
+                    
+                </div>
+                
+                <div class="nav-item ">
+                    <a class="nav-link" href="/helix/components/buttons"> <i class="fa fa-sitemap nav-icon"></i> <span class="nav-link-text"> Buttons </span></a>
+                    
+                    <div class="ml-4 font-weight-normal sub-list">
+                        <a>asdasd</a>
+                    </div>
+                
+                    
+                </div>
+                
+                <div class="nav-item active">
+                    <a class="nav-link" href="/helix/components/forms"> <i class="fa fa-sitemap nav-icon"></i> <span class="nav-link-text"> Forms </span></a>
+                    
+                </div>
+                
+                <div class="nav-item ">
+                    <a class="nav-link" href="/helix/components/table"> <i class="fa fa-sitemap nav-icon"></i> <span class="nav-link-text"> Table </span></a>
+                    
+                </div>
+                
+            </div>
         </div>
-        <div>
+        <div class="px-3 py-2 w-100">
             
 
 <h3>Forms</h3>
