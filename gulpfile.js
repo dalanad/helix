@@ -24,7 +24,6 @@ gulp.task("bundle-js", function () {
 		outfile: "dist/main.js",
 		format: "iife",
 		minify: true,
-
 		banner: "/*hlx components*/",
 	});
 });

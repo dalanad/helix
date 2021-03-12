@@ -18,18 +18,28 @@ colors:
     <title>{{title}}</title>
     <link href="{{'/dist/helix.css' | url }}" rel="stylesheet" type="text/css" />
     <script src="{{'/dist/main.js'| url }}"></script>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E🧬%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h2 class="p-2"> 🧬 Helix Components</h2>
-    <div class="px-4" style="display:grid;grid-template-columns: 200px auto;">
-        <div>
-            {% for link in links %}
-            <div> <a class="btn link" href="{{link.href | url }}">{{link.name}}</a></div>
-            {% endfor %}
+    <header class="header"> <span class="brand"><i class="fa fa-dna"></i> &nbsp; Helix Components</span> </header>
+    <div style="display:flex;height: calc(100% - 40px);">
+        <div class="sidebar collapsed">
+            <div class="nav-list">
+                {% for link in links %}
+                <div class="nav-item {{ 'active' if link.href in page.url }}">
+                    <a class="nav-link" href="{{link.href | url }}"> <i class="{{link.icon}} nav-icon"></i> <span class="nav-link-text"> {{link.name}} </span></a>
+                    {% if (link.active) %}
+                    <div class="ml-4 font-weight-normal sub-list">
+                        <a>asdasd</a>
+                    </div>
+                
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        <div>
+        <div class="px-3 py-2 w-100">
             {{ content | safe }}
         </div>
     </div>

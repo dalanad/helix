@@ -1,7 +1,28 @@
 [
-	{ "name": "Home", "href": "/" },
-	{ "name": "Alert", "href": "/components/alert" },
-	{ "name": "Buttons", "href": "/components/buttons" },
-	{ "name": "Forms", "href": "/components/forms" },
-	{ "name": "Table", "href": "/components/table" }
+	{
+		"icon": "fa fa-home",
+		"name": "Home",
+		"href": "/"
+	},
+	{
+		"icon": "fa fa-sitemap",
+		"name": "Alert",
+		"href": "/components/alert"
+	},
+	{
+		"icon": "fa fa-sitemap",
+		"name": "Buttons",
+		"href": "/components/buttons",
+		"active": true
+	},
+	{
+		"icon": "fa fa-sitemap",
+		"name": "Forms",
+		"href": "/components/forms"
+	},
+	{
+		"icon": "fa fa-sitemap",
+		"name": "Table",
+		"href": "/components/table"
+	}
 ]
