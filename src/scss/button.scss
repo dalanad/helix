@@ -1,7 +1,6 @@
 @import "variables";
 
-.btn,
-button {
+.btn {
 	transition: opacity 0.1s ease-in;
 	font: inherit;
 	vertical-align: baseline;
@@ -26,31 +25,13 @@ button {
 	border-radius: $br;
 	text-decoration: none !important;
 
-	&a {
-		color: var(--primary) !important;
-	}
-
-	&:hover {
-		opacity: 0.8;
-	}
-
 	&:focus {
 		outline: var(--primary) solid 1px;
 		outline-offset: 1px;
 	}
 
-	~ button,
 	~ .btn {
 		margin-left: 0.25em;
-	}
-
-	&.loading::before {
-		content: " ";
-		display: block;
-		height: 2em;
-		width: 30px;
-		background-size: contain;
-		// background: url(/assets/static/spinner.svg) no-repeat;
 	}
 
 	&.link {
@@ -64,6 +45,15 @@ button {
 	&.outline {
 		background-color: var(--bg);
 		color: var(--primary) !important;
+	}
+
+	&:hover {
+		opacity: 0.8;
+		color: var(--bg);
+	}
+
+	&.link:hover {
+		color: var(--primary);
 	}
 
 	&[shadow] {
@@ -86,13 +76,12 @@ button {
 	&.disabled,
 	&[disabled] {
 		pointer-events: none;
-		opacity: 0.75;
+		opacity: 0.5;
 	}
 }
 
 .using-mouse {
-	.btn,
-	button {
+	.btn {
 		outline: none;
 	}
 }

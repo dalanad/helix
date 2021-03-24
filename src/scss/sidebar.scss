@@ -15,8 +15,9 @@
 	height: 100%;
 	-webkit-box-pack: start;
 	justify-content: flex-start;
-	padding: 0px 0.5em 0.5em;
+	padding: 0 1em;
 	overflow-y: auto;
+	transition: padding 0.1s cubic-bezier(0.34, 0.64, 0.52, 0.99);
 }
 
 .sidebar .nav-item {
@@ -46,6 +47,7 @@
 	text-decoration: none !important;
 	display: block;
 	padding: 0.5em 0.75em;
+	white-space: nowrap;
 }
 
 .header {
@@ -72,10 +74,40 @@
 	.nav-link {
 		padding: .25em 0.5em;
 		text-align: center;
-        margin: .25em 0;
+        margin: .25em 0;text-align: left;
 	}
 	.nav-link-text,
 	.sub-list {
 		display: none;
 	}
 }
+
+.sub-list {
+	margin-left: 2em;
+	margin-bottom: 0.5em;
+}
+
+.sub-list .nav-item {
+	display: block;
+	border-left: 0.2em solid transparent;
+	font-weight: 500;
+	border-radius: 0;
+	padding: 0.1em 0.4em;
+	font-weight: 400;
+	color: var(--color);
+	transition: background-color 220ms ease-in, border 220ms ease-in;
+}
+
+.sub-list .nav-item:hover {
+	border-color: var(--bg-hover);
+}
+.sub-list .nav-item.active {
+	border-color: var(--success);
+	font-weight: 500;
+	animation-duration: 0.5s;
+}
+ 
+.sidebar > .nav-list > .nav-item {
+	margin-bottom: 0.5em;
+}
+ 

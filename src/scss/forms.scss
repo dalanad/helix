@@ -20,7 +20,8 @@ form section {
 }
 
 .ctrl {
-	padding: 0.3rem;
+	padding: 0.4em 0.6em;
+	line-height: 1;
 	border-radius: $br;
 	transition: box-shadow 0.1s ease-in-out;
 	font-family: inherit;
@@ -29,7 +30,10 @@ form section {
 	color: var(--color);
 	font-size: 1rem;
 	width: 100%;
-
+	&.sm {
+		padding: 0.1rem;
+	}
+	
 	&select {
 		padding-bottom: calc(0.3rem - 1px);
 	}
@@ -45,8 +49,8 @@ form section {
 		box-shadow: 0 0 1px 1px var(--muted);
 	}
 
-	&.dirty:invalid,
-	&.ng-invalid.ng-dirty {
+	&:invalid,
+	&.invalid {
 		--muted: var(--danger);
 	}
 
@@ -62,8 +66,10 @@ form section {
 		.static {
 			white-space: nowrap;
 			background: var(--bg-hover);
-			padding: 0.3em 0.5em;
-			font-weight: 500;
+			padding: 0em 0.5em;
+			font-weight: normal;
+			display: flex;
+			align-items: center;
 		}
 
 		.ctrl {
@@ -85,7 +91,7 @@ form section {
 	padding-bottom: 0.5em;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	> label {
 		display: block;
 		margin-bottom: 0.3em;
@@ -121,3 +127,5 @@ form section {
 // [type="number"]:not(.text-left) {
 // 	text-align: right;
 // }
+
+ 

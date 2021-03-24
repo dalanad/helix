@@ -5,18 +5,21 @@ layout: base.njk
 <h3>Buttons</h3>
 <div>
     {% for class in colors %}
-    <button class="{{class}}">Button</button>
+    <button class="btn {{class}}">Button</button>
+    <a href="#" class="btn {{class}}">Button</a>
     {% endfor %}
 </div>
 
 <div class="py-2">
     {% for class in colors %}
-    <button class="outline {{class}}">Button</button>
+    <button class="btn outline {{class}}">Button</button>
+    <a href="#" class="btn outline {{class}}">Button</a>
     {% endfor %}
 </div>
 <div class="py-2">
     {% for class in colors %}
-    <button class="link {{class}}">Button</button>
+    <button class="btn link {{class}}">Button</button>
+    <a href="#" class="btn link {{class}}">Button</a>
     {% endfor %}
 </div>
 

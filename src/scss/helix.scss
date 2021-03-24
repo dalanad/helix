@@ -1,57 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import "../../node_modules/bootstrap/scss/functions";
+
 @import "variables";
-@import "../../node_modules//bootstrap/scss//bootstrap-reboot.scss";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules//bootstrap/scss/reboot";
+
 @import "../../node_modules/bootstrap/scss/utilities";
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/mixins/lists";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../node_modules/bootstrap/scss/mixins/container";
+@import "../../node_modules/bootstrap/scss/mixins/grid";
+@import "../../node_modules/bootstrap/scss/mixins/utilities";
+
+@import "../../node_modules/bootstrap/scss/vendor/rfs";
+
+@import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
 
-:root {
-	--bg: #fff;
-	--color: #05386b;
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
 
-	--gray-1: #f5f5f5;
-	--gray-2: #eeeeee;
-	--gray-3: #dddddd;
-	--gray-4: #cccccc;
-	--gray-5: #888888;
+@import "../../node_modules/bootstrap/scss/grid";
 
-	--muted: var(--gray-4);
-
-	--neutral: #4677a8;
-	--primary: #{$blue};
-	--accent: #{$pink};
-	--danger: #{$red};
-	--info: #3884ec;
-	--orange: #{$orange};
-	--success: #{$green};
-
-	--shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 5px 8px -4px;
-	--shadow-light: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;
-	--shadow-heavy: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
-	--font-family: "Roboto", sans-serif;
-	--border: 1px solid var(--muted);
-	--bg-hover: #eee;
-	--bg-gradient: linear-gradient(90deg, $blue 0%, lighten($blue, 10%) 100%);
-}
-
-.dark-theme {
-	--bg: rgb(15, 32, 45);
-	--color: rgba(255, 255, 255, 0.74);
-
-	--gray-1: #f5f5f51a;
-	--gray-2: #eeeeee1a;
-	--gray-3: #dddddd1a;
-	--gray-4: #cccccc1a;
-	--gray-5: #8888881a;
-
-	--muted: #ffffff1a;
-	--muted-bg: #dddddd10;
-	--neutral: #767676;
-	--shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 5px 8px -4px;
-	--shadow-light: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;
-	--bg-hover: rgb(23, 43, 58);
-	--bg-gradient: linear-gradient(90deg, #2363c4 0%, #03a4f9 100%);
-	--border: 1px solid var(--muted);
-}
 
 body,
 html {

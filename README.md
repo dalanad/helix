@@ -9,3 +9,5 @@ A CSS Framework
 https://cdn.jsdelivr.net/gh/dalanad/helix/dist/helix.css
 
 https://cdn.jsdelivr.net/gh/dalanad/helix/dist/main.js
+
+/\*![\s\S\r]*\*/
