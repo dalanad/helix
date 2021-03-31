@@ -1,5 +1,5 @@
 .sidebar {
-	background-color: #fafafa;
+	background-color: var(--gray-1);
 	display: flex;
 	flex-direction: column;
 	padding-top: 16px;
@@ -99,7 +99,7 @@
 }
 
 .sub-list .nav-item:hover {
-	border-color: var(--bg-hover);
+	border-color: var(--color);
 }
 .sub-list .nav-item.active {
 	border-color: var(--success);

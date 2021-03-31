@@ -30,6 +30,7 @@ form section {
 	color: var(--color);
 	font-size: 1rem;
 	width: 100%;
+	
 	&.sm {
 		padding: 0.1rem;
 	}
@@ -49,12 +50,12 @@ form section {
 		box-shadow: 0 0 1px 1px var(--muted);
 	}
 
-	&:invalid,
+	&:focus:invalid.validate,
 	&.invalid {
 		--muted: var(--danger);
 	}
 
-	&:focus:valid.validate {
+	&:focus:valid.validate,.valid {
 		--muted: var(--success);
 	}
 
