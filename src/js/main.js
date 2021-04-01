@@ -1,4 +1,4 @@
-import { DropdownElement } from "./dropdown";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "./toggle-input";
 import "./button";
 
@@ -22,7 +22,6 @@ class HelixSelectElement extends HTMLElement {
 }
 
 window.customElements.define("helix-select", HelixSelectElement);
-window.customElements.define("helix-dropdown", DropdownElement);
 
 // Let the document know when the mouse is being used
 document.addEventListener("mousedown", function () {
