@@ -34,3 +34,26 @@ document.addEventListener("keydown", function (event) {
 		document.body.classList.remove("using-mouse");
 	}
 });
+
+function InitSidebar() {
+	const sidebar = document.querySelector(".sidebar");
+	if (!sidebar) return;
+	if (!localStorage.getItem("sidebar-mode")) {
+		localStorage.setItem("sidebar-mode", "open");
+	} else {
+		sidebar.classList.add(localStorage.getItem("sidebar-mode"));
+	}
+
+	let toggle = document.querySelector(".sidebar-toggle");
+	if (toggle) {
+		toggle.addEventListener("click", function () {
+			localStorage.setItem("sidebar-mode", localStorage.getItem("sidebar-mode") === "open" ? "collapsed" : "open");
+			sidebar.classList.toggle("collapsed");
+		});
+	}
+}
+
+window.addEventListener("DOMContentLoaded", (event) => {
+	InitSidebar();
+	console.log("DOM fully loaded and parsed");
+});

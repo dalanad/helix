@@ -84,12 +84,37 @@ th {
 	--primary: var(--danger);
 }
 
+.alert i {
+	color: var(--primary);
+	margin-left: -0.4em;
+}
+
 .alert {
 	border-radius: $br;
 	margin-bottom: 0.5em;
 	color: var(--primary);
 	border: 1px solid var(--primary);
 	padding: 0.5rem;
+	position: relative;
+	display: block;
+	border-radius: 4px;
+	line-height: 1;
+	padding: 0.5em;
+	font-size: 0.9em;
+	/*font-weight: 500;*/
+	border: 1px solid var(--primary);
+}
+
+.alert::before {
+	position: absolute;
+	background: var(--primary);
+	content: " ";
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.05;
 }
 
 pre {
