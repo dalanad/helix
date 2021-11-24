@@ -75,4 +75,4 @@ class HlxButtonElement extends LitElement {
 	}
 }
 
-customElements.define("hl-button", HlxButtonElement);
+customElements.define("hl-btn", HlxButtonElement);

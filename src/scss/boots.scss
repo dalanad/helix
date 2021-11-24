@@ -1,0 +1,58 @@
+@import "font";
+@import "../../node_modules/bootstrap/scss/functions";
+
+$pink: #ff4081;
+$red: #ff3838;
+$orange: #ffc107;
+$green: #15c15d;
+$blue: #0d6efd;
+
+$font-size-root: 15px;
+$font-weight-bold: 500;
+
+$font-family-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	"Segoe UI Symbol", "Noto Color Emoji";
+
+$border-radius: 0.3rem;
+
+$input-btn-padding-y: 0.3rem;
+$input-btn-padding-x: 0.6rem;
+$input-btn-focus-width: 0.1rem;
+$input-btn-focus-color-opacity: 0.6;
+
+$btn-font-weight: 500;
+$btn-padding-x: 1rem;
+$btn-padding-y: 0.2rem;
+$btn-font-size: 1.1rem;
+$btn-border-radius: 0.5rem;
+
+$form-label-font-weight: 500;
+$form-label-margin-bottom: 0.3em;
+$form-label-font-size: 0.95rem;
+
+$input-group-addon-font-weight: 500;
+
+$badge-font-size: 0.8em;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.table th {
+	font-weight: 500;
+	text-align: left;
+	letter-spacing: 0.5px;
+	white-space: nowrap;
+	padding: 0.5rem 0.75rem;
+	text-transform: uppercase !important;
+	font-size: 0.8em;
+	line-height: 0.8em;
+	vertical-align: middle;
+}
+
+.table > :not(:first-child) {
+	border-top: 1px solid $gray-200;
+}
+
+.badge {
+	text-transform: uppercase;
+	border: 1px solid $gray-200;
+}

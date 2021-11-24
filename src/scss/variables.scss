@@ -1,4 +1,4 @@
-$br: 4px;
+$br: 0.3rem;
 $border-color: #cccccc;
 $black: #05386b;
 $pink: #ff4081;
@@ -25,9 +25,16 @@ $gray-900: $black;
 	--primary: #{$blue};
 	--accent: #{$pink};
 	--danger: #{$red};
-	--info: #3884ec;
 	--orange: #{$orange};
 	--success: #{$green};
+	
+	--primary-bg: #{lighten($blue, 40%)};
+	--accent-bg: #{lighten($pink, 35%)};
+	--danger-bg: #{lighten($red, 30%)};
+	--orange-bg: #{lighten($orange, 35%)};
+	--success-bg: #{lighten($green, 35%)};
+
+	--info: #3884ec;
 
 	--shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 5px 8px -4px;
 	--shadow-light: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;

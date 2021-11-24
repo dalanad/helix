@@ -1,9 +1,23 @@
 const gulp = require("gulp"),
 	autoprefixer = require("gulp-autoprefixer"),
 	cleanCSS = require("gulp-clean-css"),
-	sass = require("gulp-sass");
+	sass = require("gulp-sass")(require("sass"));
 
-gulp.task("compile-css", function (params) {
+gulp.task("compile-bootstrap", function (params) {
+	return gulp
+		.src("./src/scss/boots.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(autoprefixer())
+		.pipe(
+			cleanCSS({
+				level: 2,
+				specialComments: false,
+			})
+		)
+		.pipe(gulp.dest("dist"));
+});
+
+gulp.task("compile-original", function (params) {
 	return gulp
 		.src("./src/scss/helix.scss")
 		.pipe(sass().on("error", sass.logError))
@@ -17,6 +31,8 @@ gulp.task("compile-css", function (params) {
 		.pipe(gulp.dest("dist"));
 });
 
+gulp.task("compile-css", gulp.parallel("compile-bootstrap", "compile-original"));
+
 gulp.task("bundle-js", function () {
 	return require("esbuild").build({
 		entryPoints: ["./src/js/main.js"],
@@ -24,7 +40,7 @@ gulp.task("bundle-js", function () {
 		outfile: "dist/main.js",
 		format: "iife",
 		minify: true,
-		banner: "/*hlx components*/",
+		banner: { js: "/*hlx components*/", css: "/*hlx components*/" },
 	});
 });
 

@@ -24,5 +24,10 @@
 		"icon": "fa fa-sitemap",
 		"name": "Table",
 		"href": "/components/table"
+	},
+	{
+		"icon": "fa fa-sitemap",
+		"name": "Table",
+		"href": "/components/bootstrap_kitchensink"
 	}
 ]
